@@ -2,6 +2,8 @@
 
 An AI-powered Resume Generator built using FastAPI, Gemini AI, JWT Authentication, and Docker.
 
+## Repository https://github.com/sravani-ai-cloud/AI-Resume-Generator
+
 ## Features
 
 * User Authentication using JWT Tokens
@@ -24,35 +26,62 @@ An AI-powered Resume Generator built using FastAPI, Gemini AI, JWT Authenticatio
 
 ## Tech Stack
 
-* Python
-* FastAPI
-* Gemini AI
-* JWT Authentication
-* Docker
-* Uvicorn
-* REST APIs
+* Python 
+* FastAPI 
+* Google Gemini AI 
+* JWT Authentication 
+* Docker 
+* Uvicorn 
+* REST APIs 
+* Environment Variables (.env)
 
 ## Project Architecture
 
-User Request
-     │
-     ▼
-JWT Authentication
-     │
-     ▼
-Profile Analyzer Agent
-     │
-     ▼
-Resume Writer Agent
-     │
-     ▼
-ATS Optimizer Agent
-     │
-     ▼
-Resume Reviewer Agent
-     │
-     ▼
-Generated Resume Response
+```text
+┌─────────────────────────┐
+│      User Request       │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│   JWT Authentication    │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│  Profile Analyzer Agent │
+│ - Analyze Experience    │
+│ - Analyze Skills        │
+│ - Extract Profile Data  │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│   Resume Writer Agent   │
+│ - Generate Resume Draft │
+│ - Structure Content     │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│   ATS Optimizer Agent   │
+│ - Keyword Optimization  │
+│ - ATS Score Improvement │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│   Resume Reviewer Agent │
+│ - Review Resume Quality │
+│ - Suggest Improvements  │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│ Generated Resume Output │
+└─────────────────────────┘
+```
+
 
 ## API Endpoints
 
