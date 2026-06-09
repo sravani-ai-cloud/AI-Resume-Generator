@@ -14,6 +14,14 @@ An AI-powered Resume Generator built using FastAPI, Gemini AI, JWT Authenticatio
 * Environment Variable Management using .env
 * Modular Multi-Agent Architecture
 
+## Project Highlights
+
+- Designed a modular multi-agent architecture for resume generation and optimization.
+- Implemented JWT-based authentication for secure API access.
+- Integrated Gemini AI for intelligent content generation and review.
+- Containerized the application using Docker for portability and deployment.
+- Built REST APIs using FastAPI with interactive Swagger documentation.
+
 ## Tech Stack
 
 * Python
@@ -27,29 +35,23 @@ An AI-powered Resume Generator built using FastAPI, Gemini AI, JWT Authenticatio
 ## Project Architecture
 
 User Request
-
-↓
-
+     │
+     ▼
 JWT Authentication
-
-↓
-
+     │
+     ▼
 Profile Analyzer Agent
-
-↓
-
+     │
+     ▼
 Resume Writer Agent
-
-↓
-
+     │
+     ▼
 ATS Optimizer Agent
-
-↓
-
+     │
+     ▼
 Resume Reviewer Agent
-
-↓
-
+     │
+     ▼
 Generated Resume Response
 
 ## API Endpoints
@@ -87,6 +89,27 @@ Request:
 }
 ```
 
+## Local Setup
+
+```bash
+git clone https://github.com/sravani-ai-cloud/AI-Resume-Generator.git
+
+cd AI-Resume-Generator
+
+pip install -r requirements.txt
+
+uvicorn main:app --reload
+```
+
+### Environment Variables
+
+Create a `.env` file:
+
+```env
+GEMINI_API_KEY=your_api_key_here
+SECRET_KEY=your_secret_key_here
+```
+
 ## Docker
 
 Build Image
@@ -100,6 +123,28 @@ Run Container
 ```bash
 docker run -d -p 8000:8000 resume-generator
 ```
+### Access API Documentation
+
+- Local Development: http://localhost:8000/docs
+- Docker Container: http://localhost:8000/docs
+
+## Screenshots
+
+### Swagger API
+
+![Swagger UI](screenshots/swagger-ui.png)
+
+### JWT Authentication
+
+![JWT Login](screenshots/login-jwt.png)
+
+### Resume Generation API
+
+![Generate Resume](screenshots/generate-resume-endpoint.png)
+
+### Docker Container
+
+![Docker](screenshots/docker-running.png)
 
 ## Future Enhancements
 
